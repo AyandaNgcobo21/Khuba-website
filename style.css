@@ -1,0 +1,1763 @@
+/* ==========================================
+   KHUBA WEBSITE
+   Navigation • Hero • About
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    background:#fff;
+    color:#333;
+    
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* COLORS */
+
+:root{
+
+    --green:#1d6b3a;
+    --darkgreen:#114225;
+    --gold:#d8a928;
+    --light:#f5f5f5;
+    --white:#fff;
+    --shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+/*=========================
+HEADER
+=========================*/
+
+header{
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+    background-image: url(background.jpg);
+}
+
+/*=========================
+NAVIGATION
+=========================*/
+
+.navbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 6%;
+
+    transition:.4s;
+
+}
+
+.navbar.scrolled{
+
+    background:white;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+
+}
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+}
+
+.logo img{
+
+    width:65px;
+
+}
+
+.logo h2{
+
+    color:white;
+    font-size:30px;
+
+}
+
+.logo p{
+
+    color:#ddd;
+    font-size:14px;
+
+}
+
+.navbar.scrolled .logo h2{
+
+    color:var(--green);
+
+}
+
+.navbar.scrolled .logo p{
+
+    color:#277a27;
+
+}
+
+.nav-links{
+
+    display:flex;
+    gap:35px;
+
+}
+
+.nav-links a{
+
+    color:white;
+    font-weight:500;
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    color:var(--gold);
+
+}
+
+.navbar.scrolled .nav-links a{
+
+    color:#8adfeb;
+
+}
+
+.call-btn{
+
+    background:var(--gold);
+    color:white;
+
+    padding:13px 28px;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.call-btn:hover{
+
+    background:#e2b331;
+    transform:translateY(-3px);
+
+}
+
+.menu-btn{
+
+    display:none;
+    font-size:28px;
+    color:white;
+    cursor:pointer;
+
+}
+
+.navbar.scrolled .menu-btn{
+
+    color:#333;
+    
+}
+
+/*=========================
+HERO
+=========================*/
+
+.hero{
+
+    position:relative;
+
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    background-size:cover;
+    background-position:center;
+    
+    animation:heroSlide 25s infinite;
+
+}
+
+/* Overlay */
+
+.overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:rgba(65, 143, 189, 0.55);
+    background-image: url(background.jpg);
+}
+
+.hero-content{
+
+    position:relative;
+    z-index:10;
+
+    max-width:850px;
+
+    padding:20px;
+
+    color:white;
+
+}
+
+.hero h4{
+
+    color:var(--gold);
+
+    letter-spacing:4px;
+
+    margin-bottom:15px;
+
+}
+
+.hero h1{
+
+    font-size:64px;
+    color: #000000;
+    line-height:1.2;
+
+    margin-bottom:25px;
+
+}
+
+.hero p{
+
+    font-size:20px;
+    color: #000000;
+    margin-bottom:35px;
+
+}
+
+/* HERO BUTTONS */
+
+.hero-buttons{
+
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+
+}
+
+.btn{
+
+    background:var(--green);
+
+    color:white;
+
+    padding:16px 35px;
+
+    border-radius:40px;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.btn:hover{
+
+    background:var(--darkgreen);
+
+    transform:translateY(-5px);
+
+}
+
+.btn-outline{
+
+    border:2px solid white;
+
+    color:white;
+
+    padding:16px 35px;
+
+    border-radius:40px;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.btn-outline:hover{
+
+    background:white;
+
+    color:var(--green);
+
+}
+
+/* HERO SLIDES */
+
+@keyframes heroSlide{
+
+0%{
+background-image:url("paving.jpg");
+}
+
+20%{
+background-image:url("painting3.jpg");
+}
+
+40%{
+background-image:url("5.jpg");
+}
+
+60%{
+background-image:url("gardening2.jpg");
+}
+
+80%{
+background-image:url("tree\ cutting.jpg");
+}
+
+100%{
+background-image:url("painting.jpg");
+}
+
+}
+
+/* Scroll Icon */
+
+.scroll-down{
+
+    position:absolute;
+
+    bottom:35px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:white;
+
+    font-size:28px;
+
+    animation:bounce 2s infinite;
+
+    z-index:10;
+
+}
+
+@keyframes bounce{
+
+0%,20%,50%,80%,100%{
+
+transform:translate(-50%,0);
+
+}
+
+40%{
+
+transform:translate(-50%,-12px);
+
+}
+
+60%{
+
+transform:translate(-50%,-6px);
+
+}
+
+}
+
+/*=========================
+ABOUT
+=========================*/
+
+#about{
+
+    padding:120px 0;
+
+}
+
+#about .container{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+
+}
+
+.about-image img{
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.about-text h5{
+
+    color:var(--gold);
+
+    letter-spacing:3px;
+
+    margin-bottom:10px;
+
+}
+
+.about-text h2{
+
+    color:var(--green);
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+}
+
+.about-text p{
+
+    color:#555;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+
+}
+
+.about-list{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-bottom:35px;
+
+}
+
+.about-list div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-weight:600;
+
+}
+
+.about-list i{
+
+    color:var(--green);
+
+}
+
+/*=========================
+MOBILE
+=========================*/
+
+@media(max-width:992px){
+
+.nav-links{
+
+display:none;
+
+}
+
+.menu-btn{
+
+display:block;
+
+}
+
+.call-btn{
+
+display:none;
+
+}
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+#about .container{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:36px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+}
+
+.about-list{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    color:#333;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+/* ==========================
+COLORS
+========================== */
+
+:root{
+    --green:#1d6b3a;
+    --darkgreen:#114225;
+    --gold:#d8a928;
+    --light:#f5f5f5;
+    --shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+/* ==========================
+SECTION SPACING
+========================== */
+
+section{
+    padding:120px 0;
+}
+
+/* ==========================
+SECTION HEADINGS
+========================== */
+
+.section-heading{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-heading h5{
+    color:var(--gold);
+    letter-spacing:3px;
+    margin-bottom:10px;
+}
+
+.section-heading h2{
+    color:var(--green);
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.section-heading p{
+    color:#666;
+}
+
+/* ==========================
+SERVICES
+========================== */
+
+#services{
+    background:var(--light);
+}
+
+.services-grid{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.service-card{
+    background:white;
+    padding:40px 30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    transition:.4s;
+}
+
+.service-card:hover{
+    transform:translateY(-10px);
+}
+
+.service-card i{
+    font-size:55px;
+    color:var(--green);
+    margin-bottom:20px;
+    transition:.4s;
+}
+
+.service-card:hover i{
+    color:var(--gold);
+    transform:scale(1.1);
+}
+
+.service-card h3{
+    margin-bottom:15px;
+}
+
+.service-card p{
+    color:#666;
+}
+
+/* ==========================
+WHY CHOOSE US
+========================== */
+
+#why .container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+    background-image: url(tree\ cutting\ 2.jpg);
+}
+
+.why-image img{
+    border-radius:20px;
+    box-shadow:var(--shadow);
+}
+
+.why-text h5{
+    color:var(--black);
+    letter-spacing:3px;
+    margin-bottom:10px;
+}
+
+.why-text h2{
+    color:var(--green);
+    font-size:42px;
+    margin-bottom:30px;
+}
+
+.why-list{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.why-list div{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    font-weight:600;
+}
+
+.why-list i{
+    color:var(--green);
+}
+
+/* ==========================
+COUNTERS
+========================== */
+
+#stats{
+    background:
+    linear-gradient(rgba(17,66,37,.85),rgba(17,66,37,.85)),
+    url("images/hero2.jpg");
+
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.stats-grid{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+}
+
+.stat-card{
+    text-align:center;
+}
+
+.stat-card h2{
+    font-size:60px;
+    color:var(--gold);
+}
+
+.stat-card p{
+    font-size:18px;
+}
+
+/* ==========================
+SCROLL REVEAL
+========================== */
+
+.reveal{
+    opacity:0;
+    transform:translateY(60px);
+    transition:1s;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ==========================
+BACK TO TOP
+========================== */
+
+.backToTop{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+
+    width:50px;
+    height:50px;
+
+    border:none;
+    border-radius:50%;
+
+    background:var(--green);
+    color:white;
+
+    cursor:pointer;
+
+    display:none;
+
+    z-index:999;
+}
+
+.backToTop.show{
+    display:block;
+}
+
+.backToTop:hover{
+    background:var(--gold);
+}
+
+/* ==========================
+RESPONSIVE
+========================== */
+
+@media(max-width:900px){
+
+    .section-heading h2{
+        font-size:34px;
+    }
+
+    #why .container{
+        grid-template-columns:1fr;
+    }
+
+    .why-list{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    section{
+        padding:90px 0;
+    }
+
+   /*==========================================
+KHUBA WHY CHOOSE US
+==========================================*/
+
+.kh-why-section{
+
+    padding:120px 0;
+    background:#fff;
+
+}
+
+.kh-why-container{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+
+}
+
+.kh-why-image{
+
+    overflow:hidden;
+    border-radius:20px;
+
+}
+
+.kh-why-image img{
+
+    border-radius:20px;
+    transition:.6s;
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+
+}
+
+.kh-why-image:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.kh-small-title{
+
+    color:#000000;
+    letter-spacing:3px;
+    font-weight:600;
+
+}
+
+.kh-why-content h2{
+
+    font-size:45px;
+    color:#114225;
+    margin:20px 0;
+
+}
+
+.kh-why-content p{
+
+    color:#666;
+    line-height:1.8;
+    margin-bottom:35px;
+
+}
+
+.kh-feature-grid{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+
+}
+
+.kh-feature-card{
+
+    background:#f8f8f8;
+    padding:18px 22px;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    transition:.4s;
+    cursor:pointer;
+
+}
+
+.kh-feature-card:hover{
+
+    background:#114225;
+    color:#fff;
+    transform:translateY(-6px);
+
+}
+
+.kh-feature-card i{
+
+    color:#1d6b3a;
+    font-size:22px;
+    transition:.4s;
+
+}
+
+.kh-feature-card:hover i{
+
+    color:#FFD54A;
+
+}
+
+/*==========================================
+COUNTERS
+==========================================*/
+
+.kh-counter-section{
+
+    padding:100px 0;
+
+    background:
+    linear-gradient(rgba(17,66,37,.90),
+    rgba(17,66,37,.90)),
+    url(images/hero2.jpg);
+
+    background-size:cover;
+    background-position:center;
+
+}
+
+.kh-counter-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:35px;
+
+}
+
+.kh-counter-box{
+
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(8px);
+    border:1px solid rgba(255,255,255,.1);
+
+    border-radius:18px;
+
+    text-align:center;
+
+    padding:45px 20px;
+
+    transition:.4s;
+
+}
+
+.kh-counter-box:hover{
+
+    transform:translateY(-10px);
+
+    background:rgba(255,255,255,.14);
+
+}
+
+.kh-counter-box h2{
+
+    font-size:60px;
+    color:#FFD54A;
+    margin-bottom:10px;
+
+}
+
+.kh-counter-box p{
+
+    color:#fff;
+    font-size:18px;
+    letter-spacing:1px;
+
+}
+
+/*==========================================
+RESPONSIVE
+==========================================*/
+
+@media(max-width:991px){
+
+.kh-why-container{
+
+grid-template-columns:1fr;
+
+}
+
+.kh-feature-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.kh-why-content h2{
+
+font-size:36px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.kh-counter-box h2{
+
+font-size:45px;
+
+}
+
+.kh-counter-box{
+
+padding:35px 20px;
+
+}
+
+} 
+
+/*==========================================
+KHUBA COUNTER SECTION
+==========================================*/
+
+.kh-counter-section{
+    padding:100px 0;
+    background:
+        linear-gradient(rgba(17,66,37,.90), rgba(17,66,37,.90)),
+        url("images/hero2.jpg");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.kh-counter-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
+    gap:30px;
+}
+
+.kh-counter-box{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:20px;
+
+    padding:40px 25px;
+    text-align:center;
+
+    transition:all .4s ease;
+}
+
+.kh-counter-box:hover{
+    transform:translateY(-10px);
+    background:rgba(255,255,255,.15);
+}
+
+.kh-counter-box h2{
+    font-size:60px;
+    font-weight:700;
+    color:#FFD54A;
+    margin-bottom:10px;
+}
+
+.kh-counter-box p{
+    color:#fff;
+    font-size:18px;
+    font-weight:500;
+    letter-spacing:1px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .kh-counter-section{
+        padding:70px 0;
+    }
+
+    .kh-counter-grid{
+        grid-template-columns:1fr;
+    }
+
+    .kh-counter-box h2{
+        font-size:48px;
+    }
+
+}
+
+/*==========================================
+KHUBA GALLERY
+==========================================*/
+
+#Slash .container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.Slash-image img{
+    border-radius:20px;
+    box-shadow:var(--shadow);
+}
+
+.kh-gallery-section{
+
+    padding:120px 0;
+
+    background:#f8f8f8;
+
+}
+
+.kh-gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+
+    gap:25px;
+
+}
+
+.kh-gallery-item{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+}
+
+.kh-gallery-item img{
+
+    width:60%;
+
+    height:auto;
+
+    object-fit:cover;
+
+    transition:.6s;
+
+
+}
+
+
+.kh-gallery-item:hover img{
+
+    transform:scale(1.15);
+
+}
+
+.kh-gallery-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(17,66,37,.75);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+.kh-gallery-item:hover .kh-gallery-overlay{
+
+    opacity:1;
+
+}
+
+.kh-gallery-overlay h3{
+
+    color:#fff;
+
+    font-size:28px;
+
+}
+
+/*==========================================
+KHUBA PREMIUM BOOKING FORM
+==========================================*/
+
+.kh-booking-section{
+
+    padding:120px 0;
+
+    background:linear-gradient(135deg,#f7f9f8,#ffffff);
+    
+}
+
+.kh-booking-form{
+    
+    max-width:950px;
+
+    margin:auto;
+
+    
+
+    padding:50px;
+
+    border-radius:25px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.10);
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+.kh-booking-form .full-width{
+
+    grid-column:1/-1;
+
+}
+
+/* LABELS */
+
+.kh-booking-form label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-weight:600;
+
+    color:#114225;
+
+    font-size:15px;
+
+}
+
+/* INPUTS */
+
+.kh-booking-form input,
+.kh-booking-form select,
+.kh-booking-form textarea{
+
+    width:100%;
+
+    padding:18px 20px;
+
+    border:2px solid #e4e4e4;
+
+    border-radius:15px;
+
+    font-size:16px;
+
+    background:#fafafa;
+
+    transition:.35s;
+
+    font-family:Poppins,sans-serif;
+
+}
+
+/* PLACEHOLDER */
+
+.kh-booking-form input::placeholder,
+.kh-booking-form textarea::placeholder{
+
+    color:#999;
+
+}
+
+/* HOVER */
+
+.kh-booking-form input:hover,
+.kh-booking-form select:hover,
+.kh-booking-form textarea:hover{
+
+    border-color:#d8a928;
+
+}
+
+/* FOCUS */
+
+.kh-booking-form input:focus,
+.kh-booking-form select:focus,
+.kh-booking-form textarea:focus{
+
+    outline:none;
+
+    border-color:#1d6b3a;
+
+    background:white;
+
+    box-shadow:0 0 0 5px rgba(29,107,58,.12);
+
+}
+
+/* SELECT */
+
+.kh-booking-form select{
+
+    cursor:pointer;
+
+}
+
+/* DATE */
+
+.kh-booking-form input[type=date]{
+
+    cursor:pointer;
+
+}
+
+/* TEXTAREA */
+
+.kh-booking-form textarea{
+
+    min-height:180px;
+
+    resize:vertical;
+
+}
+
+/* BUTTON */
+
+.kh-booking-form button{
+
+    grid-column:1/-1;
+
+    border:none;
+
+    padding:18px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:white;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    background:linear-gradient(90deg,#114225,#1d6b3a);
+
+    transition:.35s;
+
+    letter-spacing:.5px;
+
+}
+
+.kh-booking-form button:hover{
+
+    transform:translateY(-5px);
+
+    background:linear-gradient(90deg,#d8a928,#e3b53d);
+
+    box-shadow:0 15px 30px rgba(216,169,40,.35);
+
+}
+
+.kh-booking-form button i{
+
+    margin-right:10px;
+
+}
+
+/* CARD ANIMATION */
+
+.kh-booking-form{
+
+    animation:khFadeUp .8s ease;
+
+}
+
+@keyframes khFadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.kh-booking-form{
+
+grid-template-columns:1fr;
+
+padding:35px 25px;
+
+}
+
+}
+
+/*=========================================
+PREMIUM LOCATION SECTION
+=========================================*/
+
+.kh-location-section{
+
+padding:120px 0;
+
+background:#f4f6f5;
+
+}
+
+.kh-location-wrapper{
+
+display:grid;
+
+grid-template-columns:420px 1fr;
+
+gap:45px;
+
+align-items:center;
+
+}
+
+.kh-contact-card{
+
+background:#fff;
+
+padding:45px;
+
+border-radius:20px;
+
+box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+transition:.4s;
+
+}
+
+.kh-contact-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.kh-contact-card h3{
+
+font-size:32px;
+
+color:#114225;
+
+margin-bottom:30px;
+
+}
+
+.kh-contact-item{
+
+display:flex;
+
+gap:18px;
+
+margin-bottom:25px;
+
+align-items:flex-start;
+
+}
+
+.kh-contact-item i{
+
+width:55px;
+
+height:55px;
+
+background:#114225;
+
+color:#fff;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+border-radius:50%;
+
+font-size:22px;
+
+flex-shrink:0;
+
+}
+
+.kh-contact-item h4{
+
+margin-bottom:6px;
+
+color:#114225;
+
+}
+
+.kh-contact-item p{
+
+color:#666;
+
+line-height:1.7;
+
+}
+
+.kh-contact-item a{
+
+color:#333;
+
+}
+
+.kh-contact-buttons{
+
+margin-top:35px;
+
+display:grid;
+
+gap:15px;
+
+}
+
+.kh-contact-buttons a{
+
+padding:16px;
+
+border-radius:10px;
+
+font-weight:600;
+
+text-align:center;
+
+color:#fff;
+
+transition:.4s;
+
+}
+
+.kh-contact-buttons i{
+
+margin-right:8px;
+
+}
+
+.kh-call{
+
+background:#114225;
+
+}
+
+.kh-whatsapp{
+
+background:#25D366;
+
+}
+
+.kh-direction{
+
+background:#D8A928;
+
+}
+
+.kh-contact-buttons a:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 12px 25px rgba(0,0,0,.15);
+
+}
+
+.kh-map-card{
+
+overflow:hidden;
+
+border-radius:20px;
+
+box-shadow:0 20px 45px rgba(0,0,0,.15);
+
+}
+
+.kh-map-card iframe{
+
+width:100%;
+
+height:700px;
+
+border:none;
+
+}
+
+@media(max-width:992px){
+
+.kh-location-wrapper{
+
+grid-template-columns:1fr;
+
+}
+
+.kh-map-card iframe{
+
+height:450px;
+
+}
+
+}
+
+/*==========================================
+FOOTER
+==========================================*/
+
+.kh-footer{
+
+background:#114225;
+
+color:white;
+
+padding:80px 0 30px;
+
+}
+
+.kh-footer-grid{
+
+display:grid;
+
+grid-template-columns:2fr 1fr 1fr;
+
+gap:40px;
+
+margin-bottom:40px;
+
+}
+
+.kh-footer h2{
+
+margin-bottom:15px;
+
+}
+
+.kh-footer h3{
+
+margin-bottom:15px;
+
+color:#FFD54A;
+
+}
+
+.kh-footer a{
+
+display:block;
+
+margin-bottom:10px;
+
+color:white;
+
+transition:.3s;
+
+}
+
+.kh-footer a:hover{
+
+color:#FFD54A;
+
+padding-left:8px;
+
+}
+
+.kh-footer hr{
+
+margin:30px 0;
+
+border:0;
+
+height:1px;
+
+background:rgba(255,255,255,.2);
+
+}
+
+.kh-copy{
+
+text-align:center;
+
+color:#ddd;
+
+}
+
+@media(max-width:900px){
+
+.kh-footer-grid{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+}
+
+}
